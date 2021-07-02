@@ -1,4 +1,4 @@
-FROM golang:1.14
+FROM golang:1
 
 WORKDIR /go/src/github.com/globocom/secDevLabs/owasp-top10-2017-apps/a1/copy-n-paste/app
 
