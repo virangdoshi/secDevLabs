@@ -1,4 +1,4 @@
-FROM golang:1.14
+FROM golang:1.15.13
 
 WORKDIR /go/src/github.com/globocom/secDevLabs/owasp-top10-2017-apps/a5/ecommerce-api/app
 
