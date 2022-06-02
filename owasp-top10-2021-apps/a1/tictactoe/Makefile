@@ -14,9 +14,12 @@ PORT := 10005
 install: env compose msg
 
 ## Composes project using docker-compose
-compose:
-	docker-compose -f deployments/docker-compose.yml down -v --remove-orphans
-	docker-compose -f deployments/docker-compose.yml up -d --build --force-recreate
+compose: compose-down
+	docker-compose -f deployments/docker-compose.yml -p secDevLabs up -d --build --force-recreate
+
+## Down project using docker-compose
+compose-down:
+	docker-compose -f deployments/docker-compose.yml -p secDevLabs down -v --remove-orphans
 
 ## Generate new environment variables for Stegonography app
 env:
